@@ -1,0 +1,5 @@
+<h3>{{pytania[i].tresc}}</h3>
+<div *ngFor="let pytanko of pytania[i].odpowiedzi, let nrodp=index">
+<p><input type="radio" [(ngModel)]="pytania[i].udzielona" value="{{nrodp}}">{{pytanko}}</p>
+</div>
+<button type="button" (click)="sprawdz()">Kolejne</button>
